@@ -94,7 +94,6 @@ mysqldb = {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'localservices',
             'USER': 'avnadmin',
-            'PASSWORD': 'AVNS_QVsIUoGpeTSsqo_PZAT',
             'HOST': 'driveshare-enzotrujilloacosta-13ef.d.aivencloud.com',
             'PORT': '20311',    
             'OPTIONS': {
