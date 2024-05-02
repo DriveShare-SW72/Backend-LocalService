@@ -42,16 +42,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     "parking_app"
 ]
-SWAGGER_SETTINGS = {
-    'SECURITY_DEFINITIONS': {
-        'basic': {
-            'type': 'basic'
-        }
-    },
-    'USE_SESSION_AUTH': False,
-    'JSON_EDITOR': True,
-    'SHOW_REQUEST_HEADERS': True,
-}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
