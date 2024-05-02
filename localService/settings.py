@@ -78,35 +78,20 @@ WSGI_APPLICATION = 'localService.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-mysqldb = {
-    'local': {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'data',
-            'USER': 'root',
-            'PASSWORD': os.getenv('MYSQL_PASSWORD'),
-            'HOST': 'localhost',
-            'PORT': ''
-        }
-    },
-    'remote': {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'localservices',
-            'PASSWORD': os.getenv('MYSQL_PASSWORD'),
-            'USER': 'avnadmin',
-            'HOST': 'driveshare-enzotrujilloacosta-13ef.d.aivencloud.com',
-            'PORT': '20311',    
-            'OPTIONS': {
-                'ssl': {'sslmode': 'REQUIRED'}
-            }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'localservices',
+        'USER': 'avnadmin',
+        'PASSWORD': os.getenv('MYSQL_PASSWORD'),
+        'HOST': 'driveshare-enzotrujilloacosta-13ef.d.aivencloud.com',
+        'PORT': '20311',
+        'OPTIONS': {
+            'ssl': {'sslmode': 'REQUIRED'}
         }
     }
 }
 
-
-
-DATABASES = mysqldb['remote']
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
