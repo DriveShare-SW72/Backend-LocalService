@@ -85,10 +85,7 @@ DATABASES = {
         'USER': 'avnadmin',
         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
         'HOST': 'driveshare-enzotrujilloacosta-13ef.d.aivencloud.com',
-        'PORT': '20311',
-        'OPTIONS': {
-            'ssl': {'sslmode': 'REQUIRED'}
-        }
+        'PORT': '20311'
     }
 }
 
