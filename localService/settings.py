@@ -158,7 +158,7 @@ SWAGGER_SETTINGS = {
             'type': 'basic'
         }
     },
-    'REFETCH_SCHEMA_WITH_AUTH': True,
+    'REFETCH_SCHEMA_WITH_AUTH': False,
 }
 
 REST_FRAMEWORK = {
