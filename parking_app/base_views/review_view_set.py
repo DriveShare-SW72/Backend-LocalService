@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.response import Response
-from parking_app.models import Review
+from parking_app.Models.review_model import Review
 from parking_app.serializers import ReviewSerializer
 from drf_yasg.utils import swagger_auto_schema
 

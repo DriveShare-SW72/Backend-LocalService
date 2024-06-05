@@ -1,6 +1,8 @@
 from rest_framework import serializers
-from parking_app.models import Parking, Location, Schedule, Review
-from parking_app.models import Geocoordinates
+from parking_app.Models.geoocodinates import Parking, Geocoordinates
+from parking_app.Models.location_model import Location
+from parking_app.Models.schedule_model import Schedule
+from parking_app.Models.review_model import Review
 
 class ParkingSerializer(serializers.ModelSerializer):
     class Meta:

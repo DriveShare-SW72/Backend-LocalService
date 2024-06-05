@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.response import Response
-from parking_app.models import Schedule
+from parking_app.Models.schedule_model import Schedule
 from parking_app.serializers import ScheduleSerializer
 from drf_yasg.utils import swagger_auto_schema
 from parking_app.services.schedule_service import ScheduleService
