@@ -1,0 +1,22 @@
+# Python
+*.pyc
+__pycache__/
+.python-version
+
+# Django
+*.log
+db.sqlite3
+/media/
+/staticfiles/
+/localService/__pycache__/
+/localService/migrations/
+
+# Python
+__pycache__/
+*.pyc
+
+# Entornos virtuales de Python
+venv/
+env/
+.venv/
+.env/
