@@ -3,7 +3,7 @@ from rest_framework.response import Response
 
 # Create your views here.
 from parking_app.serializers import LocationSerializer
-from parking_app.models import Location
+from parking_app.Models.location_model import Location
 from parking_app.services.location_service import LocationService
 
 from drf_yasg.utils import swagger_auto_schema

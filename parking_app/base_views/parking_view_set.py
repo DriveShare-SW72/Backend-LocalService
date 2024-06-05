@@ -1,14 +1,13 @@
-from rest_framework import viewsets 
-from rest_framework.response import Response
-from rest_framework import status
-
 # Create your views here.
-from parking_app.models import Parking
 from parking_app.serializers import ParkingSerializer
+from rest_framework import viewsets, status
+from rest_framework.response import Response
 from drf_yasg.utils import swagger_auto_schema
-from django.http import JsonResponse
-from parking_app.services.parking_service import ParkingService 
 
+from django.http import JsonResponse
+from parking_app.serializers import ParkingSerializer
+from parking_app.services.parking_service import ParkingService 
+from parking_app.Models.parking_model import ParkingStatus
 parking_service = ParkingService()
 
 class BaseParkingViewSet(viewsets.ViewSet):
@@ -23,6 +22,17 @@ class BaseParkingViewSet(viewsets.ViewSet):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status=201)
+
+
+    def update_state(self, request, pk=None, state=None):
+        new_status = parking_service.update_parking_status(pk, state)
+        state = getattr(ParkingStatus, state.upper(), None)
+        if state is None:
+            possible_values = [s.value for s in ParkingStatus]
+            return Response({'message': f'Invalid status: {state}. Possible values are: {", ".join(possible_values)}'}, status=status.HTTP_400_BAD_REQUEST)
+        if new_status is None:
+            return Response({'message': 'Parking not found'}, status=status.HTTP_404_NOT_FOUND)
+        return Response({'message': 'State updated successfully'})
 
     def retrieve(self, request, pk=None): # /api/parking/<pk>/
         parking = parking_service.get_parking_by_id(pk)

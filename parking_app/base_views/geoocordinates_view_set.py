@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.response import Response
-from parking_app.models import Geocoordinates
+from parking_app.Models.geoocodinates import Geocoordinates
 from parking_app.serializers import GeocoordinatesSerializer
 from drf_yasg.utils import swagger_auto_schema
 

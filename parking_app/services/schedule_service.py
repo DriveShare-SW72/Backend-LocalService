@@ -1,4 +1,4 @@
-from parking_app.models import Schedule
+from parking_app.Models.schedule_model import Schedule
 
 class ScheduleService:
     def get_schedules(self):

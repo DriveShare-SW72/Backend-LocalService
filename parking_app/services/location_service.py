@@ -1,4 +1,4 @@
-from parking_app.models import Location
+from parking_app.Models.location_model import Location
 
 class LocationService:
     def get_locations(self):
