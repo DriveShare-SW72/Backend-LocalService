@@ -151,18 +151,13 @@ USE_TZ = True
 
 # settings.py
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'static', 'admin'),
-    os.path.join(BASE_DIR, 'static', 'rest_framework'),
-    os.path.join(BASE_DIR, 'static', 'rest_framework_swagger'),
-    os.path.join(BASE_DIR, 'static', 'drf-yasg'),
-]
+STATIC_URL = "static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://localhost:8000"]
 
 
 # Default primary key field type
