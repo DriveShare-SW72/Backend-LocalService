@@ -157,7 +157,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static', 'admin'),
     os.path.join(BASE_DIR, 'static', 'rest_framework'),
     os.path.join(BASE_DIR, 'static', 'rest_framework_swagger'),
+    os.path.join(BASE_DIR, 'static', 'drf-yasg'),
 ]
+
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
