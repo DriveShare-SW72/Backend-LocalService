@@ -152,15 +152,15 @@ USE_TZ = True
 # settings.py
 
 STATIC_URL = '/static/'
-
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'staticfiles'),
-    os.path.join(BASE_DIR, 'staticfiles', 'admin'),
-    os.path.join(BASE_DIR, 'staticfiles', 'rest_framework'),
-    os.path.join(BASE_DIR, 'staticfiles', 'rest_framework_swagger'),
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static', 'admin'),
+    os.path.join(BASE_DIR, 'static', 'rest_framework'),
+    os.path.join(BASE_DIR, 'static', 'rest_framework_swagger'),
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 # Default primary key field type
